@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --lvt-jade-dark: #002d2c;
+    --lvt-jade-accent: #00aca9;
+    --lvt-dark: #161616;
+    --lvt-light: #fafafa;
+    --lvt-soft-teal: #eaf4f4;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #fafafa;
+    color: #161616;
+    overflow-x: hidden;
+  }
+}
+
+/* Authentic LVT Webflow button styling */
+.lvt-wf-button {
+  background-color: #00aca9;
+  border: 1px solid #00aca9;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: filter 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.lvt-wf-button:hover {
+  filter: saturate(190%);
+  transform: translateY(-1px);
+}
+
+.lvt-wf-button-outline {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease-in-out;
+}
+
+.lvt-wf-button-outline:hover {
+  background-color: #ffffff;
+  color: #002d2c;
+  transform: translateY(-1px);
+}
+
+/* Proposed Luxury Styling */
+.font-display {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-sans-luxury {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom Scrollbar for Luxury view */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #00aca9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #008272;
+}
+
+/* Infinite Marquee for Partnering Companies */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+
